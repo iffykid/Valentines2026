@@ -1,0 +1,107 @@
+{
+  "partnerName": "Realeboga",
+  "whatsappNumber": "+27739650785",
+  "password": "Love",
+  "questions": [
+    {
+      "id": 1,
+      "image": "assets/0.jpg",
+      "question": "What year did we have our First Kiss?",
+      "options": [
+        "2024",
+        "2023"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 2,
+      "image": "assets/1.JPG",
+      "question": "What colour were the first set of flowers I got you?",
+      "options": [
+        "Red",
+        "Pink",
+        "White",
+        "Purple"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 3,
+      "image": "assets/2.JPG",
+      "question": "When we first met in person what did I ask you to do?",
+      "options": [
+        "Give me your numbers",
+        "Come with me to the grocery store",
+        "Give me a kiss",
+        "Come and talk"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 4,
+      "image": "assets/4.jpg",
+      "question": "What song did you ask me to ask the Momo to play at FLM?",
+      "options": [
+        "Bawo Vula",
+        "Bo Gogo",
+        "Amalobolo"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 5,
+      "image": "assets/5.jpg",
+      "question": "What did we do for our 1 year anniversary?",
+      "options": [
+        "Make Food",
+        "Go Out",
+        "Paint Pictures and have wine and fun bed time"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 6,
+      "image": "assets/6.jpg",
+      "question": "What’s our team name?",
+      "options": [
+        "SRO",
+        "SRM",
+        "ROSH"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 7,
+      "image": "assets/7.jpg",
+      "question": "What’s one healthy thing we’ve learnt to do in our relationship?",
+      "options": [
+        "Snap",
+        "Communicate",
+        "Kiss Each Other",
+        "Cuddle In Bed"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 8,
+      "image": "assets/8.jpg",
+      "question": "Who said I love you first?",
+      "options": [
+        "Ros",
+        "Shaun"
+      ],
+      "correctAnswer": 1
+    }
+  ],
+  "messages": {
+    "yes": "Hey my love 💕 Yes! Of course I’ll be your Valentine, Shaunie Bear 🐻❤️",
+    "obviously": "Hey my everything 😘 Obviously! Who else would it be, my love? 😉💖",
+    "yesCaps": "HEY SHAUNIE BEAR 😍 YES!!! A THOUSAND TIMES YES!!! You’re my everything ❤️🔥",
+    "angryOptions": [
+      "Come on. There are no more options. Why would you even click this? 🤨",
+      "Seriously? You're still looking? It's literally just YES! 😤",
+      "Okay, stop it now. You are testing my patience! Click YES! 😡"
+    ],
+    "finalOptionMessage": "That's it. You lost button privileges. There is no other choice! 🚫"
+  }
+}

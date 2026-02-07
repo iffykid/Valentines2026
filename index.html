@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Inter:wght@400;600&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="confetti-canvas"></div>
+
+    <!-- Background Decorations -->
+    <!-- Background Decorations -->
+    <div class="decorations">
+        <div class="floating-heart heart-1">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="#FC033D">
+                <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+        </div>
+        <div class="floating-heart heart-2">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="#B103A4">
+                <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+        </div>
+        <div class="floating-heart heart-3">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FC033D">
+                <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+        </div>
+        <div class="cupid-arrow-container">
+            <svg class="cupid-arrow" viewBox="0 0 100 30" width="100" height="30">
+                <line x1="0" y1="15" x2="80" y2="15" stroke="#FC033D" stroke-width="4" />
+                <polygon points="80,5 100,15 80,25" fill="#FC033D" />
+                <path d="M0,15 L-10,5 M0,15 L-10,25" stroke="#FC033D" stroke-width="4" />
+                <path d="M50,15 C60,5 70,25 80,15" fill="none" class="arrow-squig" />
+            </svg>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <h1>Love is In The Air</h1>
+            <div class="heart-icon">
+                <svg viewBox="0 0 24 24" width="60" height="60">
+                    <defs>
+                        <linearGradient id="heartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#B103A4;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FC033D;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#heartGradient)"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+            </div>
+            <p class="instructions">Instructions: Click Each Photo. Answer The Question</p>
+        </header>
+
+        <!-- Password Modal -->
+        <div id="password-overlay" class="password-overlay">
+            <div class="password-content">
+                <h2>Enter The Secret Password</h2>
+                <div class="input-group">
+                    <input type="password" id="password-input" placeholder="Enter Password">
+                    <button id="password-submit-btn">Unlock ❤️</button>
+                </div>
+                <p id="password-error" class="error-msg hidden">Incorrect Password. Try again!</p>
+            </div>
+        </div>
+
+        <div class="polaroid-container" id="polaroid-container">
+            <!-- Polaroids will be injected here via JS -->
+        </div>
+
+        <div class="love-meter-container">
+            <label for="love-meter">Love Meter (Yes I Am Measuring)</label>
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar" id="love-meter" style="width: 0%"></div>
+            </div>
+            <div class="percentage" id="love-percentage">0%</div>
+        </div>
+    </main>
+
+    <!-- Question Modal -->
+    <div id="question-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-question">Question Text</h2>
+            <div id="modal-options" class="options-container">
+                <!-- Options injected here -->
+            </div>
+            <div class="modal-actions">
+                <button id="modal-close-btn" class="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proposal Popup -->
+    <div id="proposal-popup" class="popup hidden">
+        <div class="popup-content">
+            <h1 class="proposal-title">Will You Be <br> My <br> Valentine</h1>
+            <img src="assets/RSAnimation.png" alt="Couple Proposing" class="proposal-image" id="proposal-image">
+            <!-- Fallback or generate image if not available -->
+
+            <p class="proposal-note">P.S This is non-negotiable. Remember <strong>I Love You</strong></p>
+
+            <div class="proposal-buttons">
+                <button class="btn btn-yes" data-response="yes">Yes</button>
+                <button class="btn btn-obviously" data-response="obviously">Obviously</button>
+                <button class="btn btn-yes-caps" data-response="yesCaps">YES (in caps)</button>
+            </div>
+
+            <button class="btn-text-only" id="more-options-btn">Still Need More Options : (</button>
+        </div>
+    </div>
+
+    <!-- Toast / Error Message -->
+    <div id="toast" class="toast hidden">Come on. there are no more options why would you even click this. Try again
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
